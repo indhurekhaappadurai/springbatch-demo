@@ -1,0 +1,42 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    url: jdbc:mysql://localhost:3306/spring_batch
+    password: root
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  batch:
+    jdbc:
+      initialize-schema: always
+    job:
+      enabled: false
+server:
+  port: 9191
+
+#server:
+#  port: 7872
+#spring:
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/springbatch
+#    username: root
+#    password: root
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#  batch:
+#    jdbc:
+#      initialize-schema: 'ALWAYS'
+#    job:
+#      enabled: 'false'
+#  jpa:
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.MySQL5Dialect
+#    show-sql: 'true'
+#    hibernate:
+#      ddl-auto: update
+
